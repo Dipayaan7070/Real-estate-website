@@ -1,0 +1,895 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+    integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <!-- Bootstrap CDN for Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <!-- Font Awesome (stars/arrows) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <!-- Footer (Font Awesome) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <title>Real Estate</title>
+</head>
+
+<body>
+  <!--Header starts here-->
+
+  <header>
+    <div class="navcontainer">
+      <nav aria-label="Main">
+        <div class="navbox">
+          <div class="brand">
+            <a href="index.html">
+              <img src="images/header Logo (1).png" alt="Happy home" loading="lazy" />
+            </a>
+          </div>
+
+          <ul class="navbar" id="primary-nav">
+            <li><a href="#">home</a></li>
+            <li class="dropmenu"><a href="#">about</a></li>
+            <li><a href="#">agents</a></li>
+            <li><a href="#">Testimonial</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+
+          <a href="#" class="cmn-btn">Sell Property
+            <span><i class="fi fi-rs-arrow-up-right icon"></i></span>
+          </a>
+
+          <div class="navicon">
+            <img src="images/Search Circle.png" alt="For Search" loading="lazy">
+            <img src="images/User Login.png" alt="For login" loading="lazy">
+          </div>
+
+          <!-- Hamburger -->
+          <button class="menu" id="menu" type="button" aria-label="Toggle navigation" aria-controls="primary-nav"
+            aria-expanded="false">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- optional backdrop -->
+  <div class="mobile-backdrop" aria-hidden="true"></div>
+
+
+  <main>
+
+    <section class="banner">
+      <div class="container">
+        <div class="bannercontent text-center">
+          <div class="h3-title">Welcome to Our Website!</div>
+
+          <div class="dreamhome"><img src="images/Get Your Dream Home Easily.png" alt="Banner Background"
+              loading="lazy"></div>
+          <div class="banner-buttons">
+            <a href="#" class="btn-buy">Buy</a>
+            <a href="#" class="btn-rent">Rent</a>
+          </div>
+        </div>
+        <!-- Search Bar -->
+        <div class="search-bar">
+          <form class="search-form">
+            <div class="field">
+              <label class="field-label">City</label>
+              <select class="form-select" aria-label="Select City">
+                <option value="" selected disabled>Select</option>
+                <option>New York</option>
+                <option>London</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label class="field-label">Property Type</label>
+              <select class="form-select" aria-label="Select Property Type">
+                <option value="" selected disabled>Select</option>
+                <option>Apartment</option>
+                <option>Villa</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label class="field-label">BHK</label>
+              <select class="form-select" aria-label="Select BHK">
+                <option value="" selected disabled>Select</option>
+                <option>1 BHK</option>
+                <option>2 BHK</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label class="field-label">Budget</label>
+              <select class="form-select" aria-label="Select Budget">
+                <option value="" selected disabled>Select</option>
+                <option>$500–1000</option>
+                <option>$1000–2000</option>
+              </select>
+            </div>
+
+            <button class="find-btn" type="button">
+              Find Now
+              <i class="bi bi-search" aria-hidden="true"></i>
+            </button>
+          </form>
+        </div>
+
+
+      </div>
+      </div>
+    </section>
+
+    <!-- =====Top properties======= -->
+
+    <section class="top-properties tp-scope" aria-label="Top Properties">
+      <div class="tp-container">
+        <div class="tp-header">
+          <h2 class="tp-title-h2">Top Properties</h2>
+        </div>
+
+        <div class="tp-viewport" aria-live="polite">
+          <button class="tp-arrow tp-prev" type="button" aria-label="Previous"><span>&larr;</span></button>
+          <button class="tp-arrow tp-next" type="button" aria-label="Next"><span>&rarr;</span></button>
+
+          <ul class="tp-track" id="tpTrack" role="list">
+            <!-- Card 1 -->
+            <li class="tp-card">
+              <div class="tp-media">
+                <img src="images/Properties Image 1.png" alt="Decent House exterior" loading="lazy" />
+                <span class="tp-badge for-sale">For Sale</span>
+              </div>
+              <div class="tp-body">
+                <h3 class="tp-card-title">Decent House</h3>
+                <p class="tp-meta">3 BHK | 780 sq ft | Bangalore</p>
+                <p class="tp-price"><span class="rupee">₹</span> 69 – 74 Lacs</p>
+              </div>
+            </li>
+
+            <!-- Card 2 -->
+            <li class="tp-card">
+              <div class="tp-media">
+                <img src="images/Properties Image 2.png" alt="Modern Apartment building" loading="lazy" />
+                <span class="tp-badge for-rent">For Rent</span>
+              </div>
+              <div class="tp-body">
+                <h3 class="tp-card-title">Modern Appartment</h3>
+                <p class="tp-meta">4 BHK | 900 sq ft | Mumbai</p>
+                <p class="tp-price"><span class="rupee">₹</span> 42k/Month</p>
+              </div>
+            </li>
+
+            <!-- Card 3 -->
+            <li class="tp-card">
+              <div class="tp-media">
+                <img src="images/Properties Image 3.png" alt="Row of cozy townhouses" loading="lazy" />
+                <span class="tp-badge for-rent">For Rent</span>
+              </div>
+              <div class="tp-body">
+                <h3 class="tp-card-title">Cozy Townhouse</h3>
+                <p class="tp-meta">2 BHK | 450 sq ft | Hyderabad</p>
+                <p class="tp-price"><span class="rupee">₹</span> 30k/Month</p>
+              </div>
+            </li>
+
+            <!-- Card 4 -->
+            <li class="tp-card">
+              <div class="tp-media">
+                <img src="images/Properties Image 1.png" alt="Luxury villa with pool" loading="lazy" />
+                <span class="tp-badge for-sale">For Sale</span>
+              </div>
+              <div class="tp-body">
+                <h3 class="tp-card-title">Luxury Villa</h3>
+                <p class="tp-meta">5 BHK | 2200 sq ft | Pune</p>
+                <p class="tp-price"><span class="rupee">₹</span> 3.2 Cr</p>
+              </div>
+            </li>
+
+            <!-- Card 5 -->
+            <li class="tp-card">
+              <div class="tp-media">
+                <img src="images/Properties Image 2.png" alt="Compact studio apartment" loading="lazy" />
+                <span class="tp-badge for-rent">For Rent</span>
+              </div>
+              <div class="tp-body">
+                <h3 class="tp-card-title">City Studio</h3>
+                <p class="tp-meta">1 BHK | 350 sq ft | Delhi</p>
+                <p class="tp-price"><span class="rupee">₹</span> 18k/Month</p>
+              </div>
+            </li>
+
+            <!-- Card 6 -->
+            <li class="tp-card">
+              <div class="tp-media">
+                <img src="images/Properties Image 3.png" alt="Suburban home with garden" loading="lazy" />
+                <span class="tp-badge for-sale">For Sale</span>
+              </div>
+              <div class="tp-body">
+                <h3 class="tp-card-title">Green Suburb Home</h3>
+                <p class="tp-meta">3 BHK | 1100 sq ft | Chennai</p>
+                <p class="tp-price"><span class="rupee">₹</span> 1.1 Cr</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- buy section -->
+    <section class="buy-section">
+      <div class="container">
+        <div class="row buy-align">
+          <!-- Left column -->
+          <div class="col40 buy-left">
+            <h2 class="buy-title">Buy Your Property</h2>
+            <p class="buy-subtitle">Find from houses, flats, villas, townhouses and more</p>
+            <p class="buy-text">
+              Lorem ipsum dolor sit amet consectetur. Amet porta volutpat id volutpat. Ultricies enim nec
+              dictum vitae sit malesuada sit tristique. Ut neque at amet sit. Proin nibh praesent cras risus in massa
+              amet.
+            </p>
+            <a href="#" class="buy-btn" type="button">Buy Now</a>
+          </div>
+
+          <!-- Right column: 3-image collage (TL, TR, bottom full width) -->
+          <div class="col60 buy-right">
+            <div class="grid-frame">
+              <div class="split-collage">
+                <div class="split-left">
+                  <div class="tile split-top">
+                    <img src="images/Buy Section Image 1.png" alt="Modern house" loading="lazy">
+                  </div>
+                  <div class="tile split-bottom">
+                    <img src="images/Buy Section Image 2.png" alt="Villa with pool" loading="lazy">
+                  </div>
+                </div>
+                <div class="tile split-right">
+                  <img src="images/Buy Section Image 3.png" alt="Apartment building" loading="lazy">
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Explore Cityies section--- -->
+    <section class="cities">
+      <div class="container">
+        <h2 class="cities-title">Explore Famous Cities</h2>
+
+        <div class="cities-grid">
+          <!-- Column 1 -->
+          <div class="cities-col">
+            <a class="city-card" href="#">
+              <div class="city-media">
+                <img src="images/Kolkata.png" alt="Kolkata" loading="lazy">
+                <span class="city-name">Kolkata</span>
+              </div>
+              <p class="city-meta">50,000+ Properties</p>
+            </a>
+
+            <a class="city-card" href="#">
+              <div class="city-media">
+                <img src="images/Chennai.png" alt="Chennai" loading="lazy">
+                <span class="city-name">Chennai</span>
+              </div>
+              <p class="city-meta">25,000+ Properties</p>
+            </a>
+          </div>
+
+          <!-- Column 2 -->
+          <div class="cities-col">
+            <a class="city-card" href="#">
+              <div class="city-media">
+                <img src="images/Delhi.png" alt="Delhi" loading="lazy">
+                <span class="city-name">Delhi</span>
+              </div>
+              <p class="city-meta">1,20,000+ Properties</p>
+            </a>
+
+            <a class="city-card" href="#">
+              <div class="city-media">
+                <img src="images/Bangalore.png" alt="Bangalore" loading="lazy">
+                <span class="city-name">Bangalore</span>
+              </div>
+              <p class="city-meta">74,000+ Properties</p>
+            </a>
+          </div>
+
+          <!-- Column 3 -->
+          <div class="cities-col">
+            <a class="city-card" href="#">
+              <div class="city-media">
+                <img src="images/Mumbai.png" alt="Mumbai" loading="lazy">
+                <span class="city-name">Mumbai</span>
+              </div>
+              <p class="city-meta">68,000+ Properties</p>
+            </a>
+
+            <a class="city-card" href="#">
+              <div class="city-media">
+                <img src="images/Hyderabad.png" alt="Hyderabad" loading="lazy">
+                <span class="city-name">Hyderabad</span>
+              </div>
+              <p class="city-meta">46,000+ Properties</p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!--Rent section  -->
+    <section class="rent-section">
+      <div class="container">
+        <div class="row rent-align">
+          <!-- Left content -->
+          <div class="col40 rent-left">
+            <h2 class="rent-title">Rent A Property</h2>
+            <p class="rent-subtitle">Find from houses, flats, villas, townhouses and more</p>
+            <p class="rent-text">
+              Lorem ipsum dolor sit amet consectetur. Velit amet eget massa arcu magna ac feugiat quam quis.
+              Non lacus quam aenean faucibus sagittis et amet. Felis arcu ullamcorper facilisi pellentesque.
+            </p>
+            <a href="#" class="rent-btn" type="button">Rent Now</a>
+          </div>
+
+          <!-- Right card -->
+          <div class="col60 rent-right">
+            <div class="grid-frame">
+              <div class="split-collage rent-collage">
+                <div class="tile rent-left-tall">
+                  <img src="images/Rent Section Image 1.png" alt="Residential tower" loading="lazy">
+                </div>
+                <div class="rent-right-stack">
+                  <div class="tile rent-top">
+                    <img src="images/Rent Section Image 2.png" alt="Townhomes" loading="lazy">
+                  </div>
+                  <div class="tile rent-bottom">
+                    <img src="images/Rent Section Image 3.png" alt="Single-family house" loading="lazy">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Chose Us Section------- -->
+    <section class="why-choose">
+      <div class="why-bg">
+        <img src="images/Chose Us Background Image.png" alt="Interior background" loading="lazy">
+        <div class="why-overlay"></div>
+      </div>
+
+      <div class="container">
+        <div class="why-head">
+          <h2>Why Choose Us</h2>
+          <p>Lorem ipsum dolor sit amet consectetur. Massa malesuada facilisis ut vestibulum aliquam nunc euismod.</p>
+        </div>
+
+        <div class="row why-row">
+          <!-- col 1 -->
+          <div class="col25 why-col">
+            <div class="why-icon">
+              <img src="images/Serch home icon.png" alt="Find Home" loading="lazy">
+            </div>
+            <h3 class="why-title">Find Your Future Home</h3>
+            <p class="why-text">Lorem ipsum dolor sit amet consectetur.</p>
+          </div>
+
+          <!-- col 2 -->
+          <div class="col25 why-col">
+            <div class="why-icon">
+              <img src="images/real estate market icon.png" alt="Experienced Agents" loading="lazy">
+            </div>
+            <h3 class="why-title">Experienced Agents</h3>
+            <p class="why-text">Lorem ipsum dolor sit amet consectetur.</p>
+          </div>
+
+          <!-- col 3 -->
+          <div class="col25 why-col">
+            <div class="why-icon">
+              <img src="images/handshake icon.png" alt="Deal Closed" loading="lazy">
+            </div>
+            <h3 class="why-title">Deal Closed</h3>
+            <p class="why-text">Lorem ipsum dolor sit amet consectetur.</p>
+          </div>
+
+          <!-- col 4 -->
+          <div class="col25 why-col">
+            <div class="why-icon">
+              <img src="images/Verified icon.png" alt="Verified By Team" loading="lazy">
+            </div>
+            <h3 class="why-title">Verified By Our Team</h3>
+            <p class="why-text">Lorem ipsum dolor sit amet consectetur.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+
+    <!-- Testimonials -->
+    <section class="testimonial">
+      <div class="container">
+        <div class="head">
+          <div class="h3-title">Our Testimonials</div>
+          <p>Lorem ipsum dolor sit amet consectetur. Eleifend interdum nulla libero dolor duis sapien et.</p>
+        </div>
+
+
+        <div class="row">
+          <div class="swiper myswiper">
+            <div class="swiper-wrapper">
+
+              <!-- Slide 1 -->
+
+              <div class="swiper-slide">
+                <div class="card">
+
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis
+                    commodo feugiat magna blandit rhoncus. Vestibulum ultrices at
+                    dui eu placerat. Proin eget ornare risus. Sed massa justo,
+                    lacinia vel orci eu, eleifend vulputate dolor.
+                  </p>
+                  <div class="user">
+                    <div class="pic">
+                      <img src="images/Testimonial image 1.png" alt="User" loading="lazy" />
+                      <div class="h5-title">Edward Blake</div>
+                    </div>
+
+                  </div>
+                  <div class="star">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Slide 2 -->
+
+              <div class="swiper-slide">
+                <div class="card">
+
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis
+                    commodo feugiat magna blandit rhoncus. Vestibulum ultrices at
+                    dui eu placerat. Proin eget ornare risus. Sed massa justo,
+                    lacinia vel orci eu, eleifend vulputate dolor.
+                  </p>
+                  <div class="user">
+                    <div class="pic">
+                      <img src="images/Testimonial images 2.png" alt="User" loading="lazy" />
+                      <div class="h5-title">Albert Rhett</div>
+                    </div>
+
+                  </div>
+                  <div class="star">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+                </div>
+              </div>
+
+
+              <!-- Slide 3 -->
+
+              <div class="swiper-slide">
+                <div class="card">
+
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis
+                    commodo feugiat magna blandit rhoncus. Vestibulum ultrices at
+                    dui eu placerat. Proin eget ornare risus. Sed massa justo,
+                    lacinia vel orci eu, eleifend vulputate dolor.
+                  </p>
+                  <div class="user">
+                    <div class="pic">
+                      <img src="images/Testimonial images 3.png" alt="User" loading="lazy" />
+                      <div class="h5-title">Henry Gray</div>
+                    </div>
+
+                  </div>
+                  <div class="star">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Slide 4 -->
+
+              <div class="swiper-slide">
+                <div class="card">
+
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis
+                    commodo feugiat magna blandit rhoncus. Vestibulum ultrices at
+                    dui eu placerat. Proin eget ornare risus. Sed massa justo,
+                    lacinia vel orci eu, eleifend vulputate dolor.
+                  </p>
+                  <div class="user">
+                    <div class="pic">
+                      <img src="images/Testimonial image 1.png" alt="User" loading="lazy" />
+                      <div class="h5-title">Edward Blake</div>
+                    </div>
+
+                  </div>
+                  <div class="star">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+                </div>
+              </div>
+
+
+              <!-- Slide 5 -->
+
+              <div class="swiper-slide">
+                <div class="card">
+
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis
+                    commodo feugiat magna blandit rhoncus. Vestibulum ultrices at
+                    dui eu placerat. Proin eget ornare risus. Sed massa justo,
+                    lacinia vel orci eu, eleifend vulputate dolor.
+                  </p>
+                  <div class="user">
+                    <div class="pic">
+                      <img src="images/Testimonial images 2.png" alt="User" loading="lazy" />
+                      <div class="h5-title">Albert Rhett</div>
+                    </div>
+
+                  </div>
+                  <div class="star">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+                </div>
+              </div>
+
+
+              <!-- Slide 6 -->
+
+              <div class="swiper-slide">
+                <div class="card">
+
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis
+                    commodo feugiat magna blandit rhoncus. Vestibulum ultrices at
+                    dui eu placerat. Proin eget ornare risus. Sed massa justo,
+                    lacinia vel orci eu, eleifend vulputate dolor.
+                  </p>
+                  <div class="user">
+                    <div class="pic">
+                      <img src="images/Testimonial images 3.png" alt="User" loading="lazy" />
+                      <div class="h5-title">Henry Gray</div>
+                    </div>
+
+                  </div>
+                  <div class="star">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </section>
+    </div>
+    </div>
+    </div>
+    </section>
+
+    <!-- download app section------- -->
+    <section class="download-app dark">
+      <div class="container">
+        <div class="download-wrap center">
+          <h2 class="download-title">Download Our App</h2>
+
+          <ul class="download-points">
+            <li>
+              <span class="tick" aria-hidden="true">✔</span>
+              <span>Lorem ipsum dolor sit amet consectetur.</span>
+            </li>
+            <li>
+              <span class="tick" aria-hidden="true">✔</span>
+              <span>Mauris morbi velit facilisis enim sagittis.</span>
+            </li>
+          </ul>
+
+          <div class="store-badges">
+            <!-- Google Play -->
+            <a class="store-btn play" href="https://play.google.com/store" target="_blank" rel="noopener">
+              <span class="store-icon">
+                <img src="images/Play Stor icon.png" alt="" aria-hidden="true" loading="lazy">
+              </span>
+              <span class="store-text">
+                <small>GET IT ON</small>
+                <strong>Google Play</strong>
+              </span>
+            </a>
+
+            <!-- App Store -->
+            <a class="store-btn appstore" href="https://www.apple.com/app-store/" target="_blank" rel="noopener">
+              <span class="store-icon">
+                <img src="images/App stor icon.png" alt="" aria-hidden="true" loading="lazy">
+              </span>
+              <span class="store-text">
+                <small>Download on the</small>
+                <strong>App Store</strong>
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Foter Section---------- -->
+  <footer class="site-footer">
+    <div class="footer-bg">
+      <img src="images/Footer background.png" alt="" aria-hidden="true" loading="lazy" />
+      <div class="footer-overlay"></div>
+    </div>
+
+    <div class="container">
+      <div class="row footer-row">
+        <!-- Col 1 -->
+        <div class="col25 footer-col about">
+          <div class="brand">
+
+            <img src="images/Footer logo (2).png" alt="HappyHome" class="brand-logo" loading="lazy" />
+
+          </div>
+          <p class="about-text">
+            Lorem ipsum dolor sit amet consectetur. Dolor cursus consectetur et arcu quis netus at. Tellus felis
+            elementum eget turpis amet. Duis eget neque quisque eget ipsum enim.
+          </p>
+
+          <ul class="contact-list">
+            <li>
+              <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+              <span>Lorem ipsum, dolor sit amet, consectetur</span>
+            </li>
+            <li>
+              <i class="fa-solid fa-phone" aria-hidden="true"></i>
+              <a href="tel:+91001100100">+91 001100100</a>
+            </li>
+            <li>
+              <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+              <a href="mailto:happyhome@gmail.com">happyhome@gmail.com</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Col 2 -->
+        <div class="col25 footer-col links">
+          <h4 class="foot-title">Company</h4>
+          <ul class="foot-links">
+            <li><a href="#">About</a></li>
+            <li><a href="#">Our Vision</a></li>
+            <li><a href="#">Agents</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">FAQs</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3 -->
+        <div class="col25 footer-col links">
+          <h4 class="foot-title">Services</h4>
+          <ul class="foot-links">
+            <li><a href="#">House for Rent</a></li>
+            <li><a href="#">House for Sale</a></li>
+            <li><a href="#">Villas for Rent</a></li>
+            <li><a href="#">Villas for Sale</a></li>
+            <li><a href="#">Flats for Rent</a></li>
+            <li><a href="#">Flats for Sale</a></li>
+            <li><a href="#">Townhouse for Rent</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4 -->
+        <div class="col25 footer-col connect">
+          <h4 class="foot-title">Reach Out to Us</h4>
+
+          <ul class="socials">
+            <li>
+              <a class="sc sc-fb" href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Facebook">
+                <i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
+              </a>
+            </li>
+            <li>
+              <a class="sc sc-tw" href="https://twitter.com/" target="_blank" rel="noopener" aria-label="X/Twitter">
+                <i class="fa-brands fa-x-twitter" aria-hidden="true"></i>
+              </a>
+            </li>
+            <li>
+              <a class="sc sc-ig" href="https://www.instagram.com/" target="_blank" rel="noopener"
+                aria-label="Instagram">
+                <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+              </a>
+            </li>
+            <li>
+              <a class="sc sc-yt" href="https://www.youtube.com/" target="_blank" rel="noopener" aria-label="YouTube">
+                <i class="fa-brands fa-youtube" aria-hidden="true"></i>
+              </a>
+            </li>
+          </ul>
+
+          <h4 class="foot-titlesub">Newsletter Subscribe</h4>
+          <form class="newsletter" onsubmit="return false;">
+            <input type="email" class="nl-input" placeholder="Your Email" aria-label="Your Email" />
+            <button type="submit" class="nl-btn">Submit</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2024 HappyHome. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    var swiper = new Swiper(".myswiper", {
+      slidesPerView: 3,
+      spaceBetween: 20,
+      freeMode: true,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      autoplay: {
+        delay: 1500,
+        disableOnInteraction: false,
+      }
+    });
+  </script>
+
+  <!-- Slider script  -->
+  <script>
+
+    (() => {
+      const root = document.querySelector('.tp-scope');
+      if (!root) return;
+      const track = root.querySelector('#tpTrack');
+      const prevBtn = root.querySelector('.tp-prev');
+      const nextBtn = root.querySelector('.tp-next');
+      const viewport = root.querySelector('.tp-viewport');
+      if (!track || !prevBtn || !nextBtn || !viewport) return;
+
+      viewport.setAttribute('tabindex', '0');
+
+      const getGap = () => {
+        const s = window.getComputedStyle(track);
+        const g = parseFloat(s.gap);
+        return Number.isNaN(g) ? 0 : g;
+      };
+      const getCardWidth = () => {
+        const el = track.querySelector('.tp-card');
+        return el ? el.getBoundingClientRect().width : 0;
+      };
+      const getStep = () => getCardWidth() + getGap();
+      const getMaxScroll = () => Math.max(0, track.scrollWidth - track.clientWidth);
+      const clamp = (v, min, max) => Math.min(Math.max(v, min), max);
+
+      const scrollByStep = (dir) => {
+        const target = clamp(track.scrollLeft + dir * getStep(), 0, getMaxScroll());
+        track.scrollTo({ left: target, behavior: 'smooth' });
+      };
+      const updateButtons = () => {
+        const max = getMaxScroll();
+        prevBtn.disabled = track.scrollLeft <= 2;
+        nextBtn.disabled = track.scrollLeft >= max - 2;
+      };
+
+      nextBtn.addEventListener('click', () => scrollByStep(1));
+      prevBtn.addEventListener('click', () => scrollByStep(-1));
+
+      let rafId = 0;
+      track.addEventListener('scroll', () => {
+        cancelAnimationFrame(rafId);
+        rafId = requestAnimationFrame(updateButtons);
+      });
+
+      viewport.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowRight') { e.preventDefault(); scrollByStep(1); }
+        else if (e.key === 'ArrowLeft') { e.preventDefault(); scrollByStep(-1); }
+      });
+
+      const ro = new ResizeObserver(updateButtons);
+      ro.observe(track);
+
+      root.querySelectorAll('.tp-media img').forEach((img) => {
+        if (!img.complete) {
+          img.addEventListener('load', updateButtons, { once: true });
+          img.addEventListener('error', updateButtons, { once: true });
+        }
+      });
+
+      updateButtons();
+    })();
+  </script>
+
+  <script>
+    (function () {
+      const menuBtn = document.getElementById('menu');
+      const navMenu = document.getElementById('primary-nav');
+      const backdrop = document.querySelector('.mobile-backdrop');
+      const bpDesktop = window.matchMedia('(min-width: 993px)');
+
+      function setOpen(open) {
+        navMenu.classList.toggle('active', open);
+        if (backdrop) backdrop.classList.toggle('active', open);
+        if (menuBtn) menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+        document.documentElement.classList.toggle('no-scroll', open);
+      }
+
+      menuBtn.addEventListener('click', () => setOpen(!navMenu.classList.contains('active')));
+      if (backdrop) backdrop.addEventListener('click', () => setOpen(false));
+      navMenu.addEventListener('click', (e) => {
+        if (e.target.matches('a')) setOpen(false);
+      });
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') setOpen(false);
+      });
+      bpDesktop.addEventListener?.('change', (e) => { if (e.matches) setOpen(false); });
+    })();
+  </script>
+
+  <div class="mobile-backdrop" aria-hidden="true"></div>
+
+</body>
+
+</html>
