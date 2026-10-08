@@ -1,4 +1,4 @@
-# 🏠 HappyHome – Real Estate Website
+# 🏠  Real Estate Website
 
 A modern, responsive **real estate property website UI** built with **HTML5, CSS3, and JavaScript**. HappyHome is designed as a property discovery platform where users can explore homes for sale or rent, browse properties by city, view property information, and explore testimonials.
 
